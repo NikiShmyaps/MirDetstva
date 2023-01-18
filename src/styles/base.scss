@@ -1,0 +1,117 @@
+#body {
+	margin: 0;
+	min-height: 100vh;
+	min-width: 100vw;
+	position: relative;
+	overflow-x: hidden;
+	font-family: $Inter;
+	color: $blackText;
+	background: $backgroundWhite;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+
+		background: #0a0c14;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(white, 0.5);
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(white, 0.8);
+	}
+	*:not(ymaps) {
+		box-sizing: border-box;
+		&::-webkit-scrollbar {
+			width: 6px;
+			height: 0px;
+			background: unset;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba(white, 0.5);
+			border-radius: 4px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background-color: rgba(white, 0.8);
+			border-radius: 4px;
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+@mixin overflow_ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin vertical_padding {
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@media screen and (max-width: $screen-l) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	@media screen and (max-width: $screen-s) {
+		padding-top: 28px;
+		padding-bottom: 28px;
+	}
+}
+
+@mixin horizon_padding {
+	padding-left: 40px;
+	padding-right: 40px;
+
+	@media screen and (max-width: $screen-l) {
+	}
+
+	@media screen and (max-width: $screen-s) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@mixin width_container {
+	width: 100%;
+	max-width: 1352px;
+	margin: 0px auto;
+
+	@media screen and (max-width: $screen-l) {
+		max-width: 1200px;
+	}
+
+	@media screen and (max-width: $screen-s) {
+		max-width: 765px;
+	}
+}
+
+@mixin container_wrapper {
+	@include horizon_padding;
+	@include vertical_padding;
+	@include width_container;
+}
+
+@mixin before-rise {
+	opacity: 0;
+}
+
+@mixin rise-left {
+	position: relative;
+	animation: riseLeft 500ms ease-in forwards;
+}
+@mixin rise-right {
+	position: relative;
+	animation: riseRight 500ms ease-in forwards;
+}
+
+@mixin rise-bottom {
+	position: relative;
+	animation: riseBottom 500ms ease-in forwards;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
+}

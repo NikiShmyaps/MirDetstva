@@ -1,0 +1,303 @@
+$montserrat: 'Montserrat', -apple-system, sans-serif;
+$Inter: 'Inter', -apple-system, sans-serif;
+$openSans: 'MADE Outer Sans', 'Montserrat', -apple-system, sans-serif;
+$azeretMono: 'Azeret Monos', 'Montserrat', -apple-system, sans-serif;
+$menlo: 'Menlo', 'monospasce';
+
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+$size-small: 12px;
+$size-normal: 15px;
+$size-medium: 16px;
+$size-large: 18px;
+$size-xLarge: 20px;
+
+@mixin light {
+	font-weight: $weight-light;
+}
+
+@mixin semibold {
+	font-weight: $weight-semibold;
+}
+
+@mixin h1 {
+	font-family: $openSans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 88px;
+	line-height: 88px;
+
+	@media screen and (max-width: $screen-s) {
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 48px;
+		letter-spacing: -0.02em;
+		text-transform: capitalize;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 48px;
+		letter-spacing: -0.02em;
+		text-transform: capitalize;
+	}
+}
+
+@mixin h2 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 48px;
+
+	@media screen and (max-width: $screen-s) {
+		font-size: 40px;
+		line-height: 48px;
+		letter-spacing: -0.02em;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-size: 32px;
+		line-height: 40px;
+		letter-spacing: -0.02em;
+	}
+}
+
+@mixin h3 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 40px;
+}
+
+@mixin p1 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 32px;
+
+	@media screen and (max-width: $screen-l) {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	@media screen and (max-width: $screen-s) {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 28px;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+@mixin p2 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 32px;
+
+	@media screen and (max-width: $screen-s) {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+@mixin p3 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 32px;
+
+	@media screen and (max-width: $screen-s) {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 20px;
+	}
+}
+
+@mixin p3_alt {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+@mixin p4 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	@media screen and (max-width: $screen-s) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+@mixin p5 {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+@mixin a {
+	font-weight: $weight-regular;
+	color: $white;
+	&:hover {
+		color: $cloudblue;
+	}
+}
+
+@mixin input_default_text {
+	font-family: $Inter;
+	font-size: $size-large;
+}
+
+@mixin button_text {
+	font-family: $menlo;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+@mixin tag_text {
+	font-family: $azeretMono;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+@mixin lesson_tag {
+	font-family: $Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+
+	@media screen and (max-width: $screen-l) {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: $screen-s) {
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+
+@mixin feedback_button {
+	font-family: $azeretMono;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+@mixin code {
+	font-family: $azeretMono;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.02em;
+}
+
+@mixin custom_bold {
+	font-family: $openSans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 56px;
+	line-height: 64px;
+
+	@media screen and (max-width: $screen-s) {
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 40px;
+		letter-spacing: -0.02em;
+		text-transform: capitalize;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		font-weight: 400;
+		font-size: 21px;
+		line-height: 32px;
+		letter-spacing: -0.02em;
+	}
+}
+
+@mixin card_title {
+	font-family: $montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: -0.01em;
+	@media screen and (max-width: $screen-s) {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+@mixin made_outer_sans_title {
+	font-family: $openSans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 64px;
+	letter-spacing: -0.02em;
+
+	@media screen and (max-width: $screen-l) {
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	@media screen and (max-width: $screen-s) {
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 40px;
+	}
+}

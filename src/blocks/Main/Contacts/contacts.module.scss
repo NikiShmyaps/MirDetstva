@@ -1,0 +1,153 @@
+.container {
+  @include container_wrapper;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 0;
+  padding-bottom: 0;
+  @media screen and (max-width: $screen-l) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: $screen-s) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+  }
+
+  .map {
+    height: 550px;
+    width: 100%;
+    @media screen and (max-width: $screen-l) {
+      height: 420px;
+    }
+    @media screen and (max-width: $screen-s) {
+      height: 370px;
+    }
+  }
+
+  .contacts {
+    padding-top: 100px;
+    padding-left: 100px;
+
+    @media screen and (max-width: $screen-l) {
+      padding-top: 50px;
+      padding-left: 40px;
+    }
+
+    @media screen and (max-width: 850px) {
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: $screen-s) {
+      padding-top: 30px;
+      padding-left: 0;
+    }
+
+    .title {
+      @include h2;
+      font-weight: 900;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      color: $blackText;
+
+      &_gradient {
+        background: linear-gradient(96.05deg, #d63124 7.49%, #f4cb09 13.34%, #65ba60 29.41%, #137e5c 35.41%, #2c4c8a 40.41%, #534587 53.41%, #9f375d 62.41%, #da222c 70.41%);
+        background-clip: text;
+        color: transparent;
+        line-height: 60px;
+      }
+
+      &_small {
+        @include h3;
+
+        @media screen and (max-width: 850px) {
+          font-size: 26px;
+        }
+        @media screen and (max-width: $screen-s) {
+          font-size: 22px;
+        }
+      }
+
+      @media screen and (max-width: $screen-l) {
+        font-size: 42px;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 850px) {
+        font-size: 38px;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: $screen-s) {
+        font-size: 33px;
+        line-height: 16px;
+      }
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      &-wrap {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid transparent;
+        transition: .2s ease;
+      }
+
+      &__text {
+        @include p1;
+        font-size: 28px;
+        margin-left: 15px;
+        color: $blackText;
+        font-weight: 600;
+
+        @media screen and (max-width: $screen-s) {
+          font-weight: 600;
+        }
+      }
+
+      &:nth-child(2) {
+        margin: 50px 0;
+      }
+
+      &:last-child {
+        &:hover .item-wrap {
+          transition: .2s ease;
+          border-color: #5CCE54;
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        &__text {
+          font-size: 18px;
+          margin-left: 5px;
+        }
+        &:nth-child(2) {
+          margin: 25px 0;
+        }
+        .image__local {
+          width: 23px;
+          height: 23px;
+        }
+        .image__clock {
+          width: 22px;
+          height: 22px;
+        }
+        .image__phone {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.rise-left {
+	@include rise-left;
+}

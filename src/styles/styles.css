@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+	margin: unset;
+	padding: unset;
+}
+
+a {
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}

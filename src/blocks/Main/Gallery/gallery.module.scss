@@ -1,0 +1,40 @@
+.container {
+  @include container_wrapper;
+  padding-top: 0;
+  @media screen and (max-width: $screen-l) {
+    padding-top: 0;
+  }
+  @media screen and (max-width: 860px) {
+    padding-top: 70px;
+  }
+  @media screen and (max-width: $screen-s) {
+    padding-top: 0;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    justify-content: space-between;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    @media screen and (max-width: $screen-s) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(213px, 1fr));
+    }
+
+    .item {
+      opacity: 0;
+    }
+  }
+}
+
+.rise-left {
+	@include rise-left;
+}
+
+.rise-right {
+	@include rise-right;
+}

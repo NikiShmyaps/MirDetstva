@@ -1,0 +1,214 @@
+.container {
+  @include container_wrapper;
+  display: flex;
+  flex-direction: column;
+  
+
+  .title {
+    @include h2;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $screen-l) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: $screen-s) {
+      font-size: 30px;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-l) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .from {
+    max-width: 600px;
+    width: 100%;
+
+    @media screen and (max-width: $screen-l) {
+      margin-top: 20px;
+    }
+
+    .phone-wrap {
+      position: relative;
+    }
+
+    .input {
+      &_group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        @media screen and (max-width: $screen-s) {
+          margin-bottom: 10px;
+        }
+      }
+      &_title {
+        @include p2;
+        margin-bottom: 5px;
+
+        &-necessarily {
+          color: #EF4829;
+        }
+      }
+      &_field {
+        width: 100%;
+        padding-left: 10px;
+        height: 40px;
+        @include p3;
+
+        border-radius: 10px;
+        background: #FFFFFF;
+        border: none;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+
+        @media screen and (max-width: $screen-s) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: $screen-xs) {
+          font-weight: 400;
+        }
+        &-phone {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          width: 23px;
+          height: 32px;
+          @include p3;
+
+          @media screen and (max-width: $screen-s) {
+            height: 24px;
+            width: 19px;
+            font-size: 16px;
+          }
+          @media screen and (max-width: $screen-xs) {
+            height: 20px;
+            font-weight: 400;
+          }
+        }
+      }
+      &-phone {
+        padding-left: 30px;
+        @media screen and (max-width: $screen-s) {
+          padding-left: 28px;
+        }
+      }
+      &_error {
+        @include p2;
+        color: #EF4829;
+      }
+    }
+
+    .error {
+      border: 1px solid #EF4829;
+    }
+
+    .comment {
+      padding-left: 10px;
+      padding-top: 5px;
+      @include p3;
+      height: 100px;
+      border-radius: 10px;
+      background: #FFFFFF;
+      border: none;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .button {
+      cursor: pointer;
+      background: #FFFFFF;
+      border: none;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      width: 200px;
+      height: 40px;
+      
+      @include p1;
+      color: $blackText;
+      font-weight: 600;
+    }
+  }
+
+  .image {
+    &-wrap {
+      margin-right: 50px;
+      width: 450px;
+
+      @media screen and (max-width: $screen-l) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin: 0 auto;
+        width: 350px;
+      }
+
+      @media screen and (max-width: $screen-s) {
+        width: 250px;
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(29,29,30,.88);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  &-active {
+    display: flex;
+  }
+
+  &-wrap {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width: $screen-s) {
+      max-width: 375px;
+      width: 90%;
+      padding: 15px;
+    }
+  }
+
+  &__title {
+    @include h3;
+    font-weight: 600;
+    margin-bottom: 20px;
+    @media screen and (max-width: $screen-s) {
+      font-size: 26px;
+      text-align: center;
+      line-height: 28px;
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    width: 200px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 2px solid #aaa7a6;
+    @include p1;
+    color: $blackText;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media screen and (max-width: $screen-s) {
+      font-weight: 600;
+    }
+  }
+}

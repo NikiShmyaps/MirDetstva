@@ -1,0 +1,1 @@
+export { IntersectionInitizalize } from './MainPageIntersectionCallback';

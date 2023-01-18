@@ -1,0 +1,16 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	background: $backgroundWhite;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+	width: 100%;
+	position: relative;
+}
