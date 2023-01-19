@@ -7,14 +7,14 @@ export default (req, res) => {
     port: 465,
     host: "smtp.yandex.ru",
     auth: {
-      user: process.env.LOG,
-      pass: process.env.PASSWORD,
+      user: 'mirDetsva.contact@yandex.ru',
+      pass: 'utwuxzzcxbkeihar',
     },
     secure: true,
   })
   const mailData = {
-    from: process.env.LOG,
-    to: process.env.MAILTO,
+    from: 'mirDetsva.contact@yandex.ru',
+    to: 'mirdetstva.tver@yandex.ru',
     subject: `${req.body.name} Оставил новую заявка`,
     html: `<div>
       Пользователь ${req.body.name} оставил заявку, его номер телефона +7${req.body.phone}<br/>
