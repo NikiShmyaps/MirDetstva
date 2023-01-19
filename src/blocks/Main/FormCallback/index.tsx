@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import styles from './formCallback.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
-import { Image } from '@components';
+import { Image, Spinner } from '@components';
 import {  useFormik } from 'formik';
 
 export const FormCallback: React.FC = () => {
 
   const [modal, setModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validate = (values: any) => {
     const errors = {};
@@ -56,7 +57,8 @@ export const FormCallback: React.FC = () => {
     },
     validate,
     onSubmit: (values, {resetForm}) => {
-      console.log(values);
+      setModal(true)
+      setIsLoading(true)
       fetch(`api/FormSendingMail`, {
         method: 'POST',
         headers: {
@@ -72,7 +74,7 @@ export const FormCallback: React.FC = () => {
             children: '',
             comment: '',
           }})
-          setModal(true)
+          setIsLoading(false)
         }
       }).catch(error => {
         console.log(error)
@@ -179,8 +181,16 @@ export const FormCallback: React.FC = () => {
       </div>
       <div className={cx('modal', `${modal ? 'modal-active': null}`)}>
         <div className={cx('modal-wrap')}>
-          <h2 className={cx('modal__title')}>Данные успешно отправлены</h2>
-          <button className={cx('modal__btn')} onClick={() => setModal(false)}>ок</button>
+          {
+            isLoading ? (
+              <Spinner />
+            ) : (
+              <>
+                <h2 className={cx('modal__title')}>Данные успешно отправлены</h2>
+                <button className={cx('modal__btn')} onClick={() => setModal(false)}>ок</button>
+              </>
+            )
+          }
         </div>
       </div>
     </section>
