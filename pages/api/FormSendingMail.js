@@ -9,8 +9,8 @@ export default async (req, res) => {
     secure: true,
     host: "smtp.yandex.ru",
     auth: {
-      user: 'mirDetsva.contact@yandex.ru',
-      pass: 'utwuxzzcxbkeihar',
+      user: process.env.LOG,
+      pass: process.env.PASSWORD,
     },
   })
 
@@ -23,8 +23,8 @@ export default async (req, res) => {
   } = req.body
 
   await transporter.sendMail({
-    from: 'mirDetsva.contact@yandex.ru',
-    to: 'mirdetstva.tver@yandex.ru',
+    from: process.env.LOG,
+    to: process.env.MAILTO,
     subject: `${name} оставил новую заявка`,
     html: `<div>
       Пользователь ${name} оставил заявку, его номер телефона +7${phone}<br/>
@@ -33,27 +33,5 @@ export default async (req, res) => {
       ${comment ? `Так же пользователь оставил комментарий: ${comment}` : ''}
     </div>`
   })
-
-  // res.json({message:
-  // `
-  //   Ethereal Mail Message ID: ${info.messageId}
-  //   Name from form: ${name}
-  // `})
-
-  // const mailData = {
-  //   from: 'mirDetsva.contact@yandex.ru',
-  //   to: 'mirdetstva.tver@yandex.ru',
-  //   subject: `${req.body.name} Оставил новую заявка`,
-  //   html: `<div>
-  //     Пользователь ${req.body.name} оставил заявку, его номер телефона +7${req.body.phone}<br/>
-  //     Количество взрослых: ${req.body.adult}<br/>
-  //     Количество детей: ${req.body.children}<br/>
-  //     ${req.body.comment ? `Так же пользователь оставил комментарий: ${req.body.comment}` : ''}
-  //   </div>`
-  // }
-  // await transporter.sendMail(mailData, function (err, info) {
-  //   if(err) {console.log(err)}
-  //   else {console.log(info)}
-  // })
   res.status(200).end()
 }
