@@ -9,8 +9,8 @@ export default async (req, res) => {
     secure: true,
     host: "smtp.yandex.ru",
     auth: {
-      user: process.env.LOG,
-      pass: process.env.PASSWORD,
+      user: 'mirDetsva.contact@yandex.ru',
+      pass: 'utwuxzzcxbkeihar',
     },
   })
 
@@ -23,8 +23,8 @@ export default async (req, res) => {
   } = req.body
 
   await transporter.sendMail({
-    from: process.env.LOG,
-    to: process.env.MAILTO,
+    from: 'mirDetsva.contact@yandex.ru',
+    to: 'mirdetstva.tver@yandex.ru',
     subject: `${name} оставил новую заявка`,
     html: `<div>
       Пользователь ${name} оставил заявку, его номер телефона +7${phone}<br/>
