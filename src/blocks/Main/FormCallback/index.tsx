@@ -23,7 +23,7 @@ export const FormCallback: React.FC = () => {
     if (!values.phone) {
       // @ts-ignore
       errors.phone = 'Пожалуйста, введите номер телефона'
-    } else if (!/^([9]{1}[0-9]{9})?$/i.test(values.phone)) {
+    } else if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/i.test(values.phone)) {
       // @ts-ignore
       errors.phone = 'Некорректный номер телефона'
     }
