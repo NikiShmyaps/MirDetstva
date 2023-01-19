@@ -27,7 +27,7 @@ export default async (req, res) => {
     to: 'mirdetstva.tver@yandex.ru',
     subject: `${name} оставил новую заявка`,
     html: `<div>
-      Пользователь ${name} оставил заявку, его номер телефона +7${phone}<br/>
+      Пользователь ${name} оставил заявку, его номер телефона ${phone}<br/>
       Количество взрослых: ${adult}<br/>
       Количество детей: ${children}<br/>
       ${comment ? `Так же пользователь оставил комментарий: ${comment}` : ''}

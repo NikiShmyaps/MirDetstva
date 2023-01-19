@@ -110,7 +110,7 @@ export const FormCallback: React.FC = () => {
           <div className={cx('input_group')} >
             <label className={cx('input_title')} htmlFor='phone'>Телефон <span className={cx('input_title-necessarily')}>*</span></label>
             <div className={cx('phone-wrap')}>
-              <span className={cx('input_field-phone')}>+7</span>
+              {/* <span className={cx('input_field-phone')}>+7</span> */}
               <input
                 id="phone"
                 name='phone'
