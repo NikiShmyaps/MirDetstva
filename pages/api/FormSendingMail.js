@@ -1,17 +1,19 @@
-export default (req, res) => {
+import nodemailer from 'nodemailer'
+
+export default async (req, res) => {
   require('dotenv').config()
 
-  let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
     service: "Yandex",
     port: 465,
+    secure: true,
     host: "smtp.yandex.ru",
     auth: {
       user: 'mirDetsva.contact@yandex.ru',
       pass: 'utwuxzzcxbkeihar',
     },
-    secure: true,
   })
+
   const mailData = {
     from: 'mirDetsva.contact@yandex.ru',
     to: 'mirdetstva.tver@yandex.ru',
@@ -23,12 +25,9 @@ export default (req, res) => {
       ${req.body.comment ? `Так же пользователь оставил комментарий: ${req.body.comment}` : ''}
     </div>`
   }
-  transporter.sendMail(mailData, function (err, info) {
+  await transporter.sendMail(mailData, function (err, info) {
     if(err) {console.log(err)}
-    else {
-      res.status(200).end()
-      console.log(info)
-    }
+    else {console.log(info)}
   })
-  
+  res.status(200).end()
 }
