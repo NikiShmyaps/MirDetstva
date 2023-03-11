@@ -6,18 +6,18 @@ import { Card } from './Card';
 import { useIntersection } from '@/hooks';
 
 export const Gallery: React.FC = () => {
-  const item1 = useIntersection(100, cx('item', 'rise-right'));
-  const item2 = useIntersection(200, cx('item', 'rise-left'));
-  const item3 = useIntersection(100, cx('item', 'rise-right'));
-  const item4 = useIntersection(200, cx('item', 'rise-left'));
-  const item5 = useIntersection(100, cx('item', 'rise-right'));
-  const item6 = useIntersection(200, cx('item', 'rise-left'));
-  const item7 = useIntersection(100, cx('item', 'rise-right'));
-  const item8 = useIntersection(200, cx('item', 'rise-left'));
-  const item9 = useIntersection(100, cx('item', 'rise-right'));
-  const item10 = useIntersection(200, cx('item', 'rise-left'));
-  const item11 = useIntersection(100, cx('item', 'rise-right'));
-  const item12 = useIntersection(200, cx('item', 'rise-left'));
+  const item1 = useIntersection(100, cx('item', 'rise-left'));
+  const item2 = useIntersection(300, cx('item', 'rise-bottom-right'));
+  const item3 = useIntersection(200, cx('item', 'rise-right-left'));
+  const item4 = useIntersection(100, cx('item', 'rise-left-right'));
+  const item5 = useIntersection(300, cx('item', 'rise-bottom-left'));
+  const item6 = useIntersection(200, cx('item', 'rise-right'));
+  const item7 = useIntersection(100, cx('item', 'rise-left'));
+  const item8 = useIntersection(300, cx('item', 'rise-bottom-right'));
+  const item9 = useIntersection(200, cx('item', 'rise-right-left'));
+  const item10 = useIntersection(100, cx('item', 'rise-left-right'));
+  const item11 = useIntersection(300, cx('item', 'rise-bottom-left'));
+  const item12 = useIntersection(200, cx('item', 'rise-right'));
   
 	return (
 		<section className={cx('container')}>

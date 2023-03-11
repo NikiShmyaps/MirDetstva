@@ -1,6 +1,6 @@
 @keyframes riseLeft {
 	0% {
-		transform: translateX(100px);
+		transform: translateX(-100px);
 		opacity: 0;
 	}
 	100% {
@@ -9,9 +9,20 @@
 	}
 }
 
+@keyframes riseBottom {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
 @keyframes riseRight {
 	0% {
-		transform: translateX(-100px);
+		transform: translateX(100px);
 		opacity: 0;
 	}
 	100% {

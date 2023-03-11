@@ -1,0 +1,97 @@
+.container {
+  @include container_wrapper;
+  padding-top: 0;
+
+  .title {
+    @include h2;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1d1d1e;
+  }
+
+  .line {
+    margin: 20px 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(96.05deg, #d63124 12.49%, #f4cb09 28.34%, #65ba60 54.41%, #137e5c 60.41%, #2c4c8a 65.41%, #534587 79.41%, #9f375d 88.41%, #da222c 96.41%);
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    column-gap: 10px;
+
+    @media screen and (max-width: $screen-s) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    &__head {
+      max-height: 32px;
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: $screen-s) {
+        margin-bottom: 15px;
+      }
+
+      .item__title {
+        @include p1;
+        margin-left: 16px;
+        font-weight: 600;
+        color: #1d1d1e;
+
+        @media screen and (max-width: $screen-s) {
+          font-weight: 600;
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: $screen-xs) {
+          font-size: 18px;
+        }
+      }
+
+      .elem {
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        &.red {
+          background: #d63124;
+        }
+        &.yellow {
+          background: #f4cb09;
+        }
+        &.green {
+          background: #65ba60;
+        }
+        &.darkGreen {
+          background: #137e5c;
+        }
+        &.blue {
+          background: #2c4c8a;
+        }
+        &.purple {
+          background: #534587;
+        }
+        &.darkRed {
+          background: #9f375d;
+        }
+      }
+    }
+
+    &__description {
+      @include p2;
+      color: #1d1d1e;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .bold {
+      font-weight: 600;
+    }
+  }
+  
+}

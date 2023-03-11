@@ -6,6 +6,7 @@ import { Gallery } from './Gallery';
 import { Contacts } from './Contacts';
 import { VideoPlayer } from './VideoPlayer';
 import { FormCallback } from './FormCallback';
+import { Price } from './Price';
 
 export const Main: React.FC = () => {
 
@@ -14,6 +15,7 @@ export const Main: React.FC = () => {
 			<Description/>
 			<Gallery />
 			<VideoPlayer />
+			<Price />
 			<div className={cx('grayLight')}>
 				<Contacts />
 			</div>
