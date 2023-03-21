@@ -8,7 +8,7 @@ module.exports = withImages({
 		tsconfigPath: './tsconfig.next.json',
 	},
 
-	assetPrefix: './',
+	// assetPrefix: './',
 
 	images: {	
 		unoptimized: true,

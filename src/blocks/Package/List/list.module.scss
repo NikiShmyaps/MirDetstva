@@ -1,0 +1,179 @@
+.container {
+  @include container_wrapper;
+
+  .title {
+    @include h2;
+    font-weight: 600;
+    text-align: center;
+    color: $blackText;
+    margin-bottom: 40px;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 600px);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @media screen and (max-width: $screen-l) {
+      grid-template-rows: repeat(3, 500px);
+    }
+    @media screen and (max-width: $screen-s) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 410px);
+    }
+
+    .item {
+      opacity: 0;
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-grow: 1;
+    margin-top: 15px;
+    &-text {
+      @include h3;
+      font-weight: 700;
+      color: $grayDark;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media screen and (max-width: $screen-l) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-15deg, #d63124 16.49%, #f4cb09 32.34%, #65ba60 42.41%, #137E5C 52.41%, #2c4c8a 62.41%, #534587 72.41%, #9f375d 82.41%, #da222c 92.41%);
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 18px;
+    box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.15);
+    .block {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      background: rgba(237,240,246,.8);
+      padding: 25px 15px;
+
+      @media screen and (max-width: $screen-s) {
+        padding: 15px 10px;
+      }
+      .item {
+        &_title {
+          @include h3;
+          font-weight: 600;
+          color: $grayDark;
+          text-transform: uppercase;
+          &_accent {
+            white-space: nowrap;
+          }
+
+          @media screen and (max-width: $screen-l) {
+            font-size: 24px;
+            line-height: 28px;
+          }
+          @media screen and (max-width: $screen-s) {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+        &-list {
+          margin-top: 30px;
+          @media screen and (max-width: $screen-l) {
+            margin-top: 15px;
+          }
+          @media screen and (max-width: $screen-s) {
+            margin-top: 10px;
+          }
+          &__item {
+            display: flex;
+            align-items: flex-start;
+
+            &:not(:first-child) {
+              margin-top: 10px;
+              @media screen and (max-width: $screen-l) {
+                margin-top: 5px;
+              }
+            }
+
+            &-block {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .check {
+              width: 30px;
+              height: 30px;
+              min-width: 30px;
+              min-height: 30px;
+              @media screen and (max-width: $screen-s) {
+                width: 25px;
+                height: 25px;
+                min-width: 25px;
+                min-height: 25px;
+              }
+            }
+
+            &_text {
+              @include p1;
+              color: $grayDark;
+              font-weight: 600;
+              text-transform: uppercase;
+              margin-left: 5px;
+              &-accent {
+                text-transform: none;
+                font-size: 22px;
+                font-weight: 500;
+              }
+
+              @media screen and (max-width: $screen-l) {
+                font-size: 18px;
+                line-height: 24px;
+                &-accent {
+                  font-size: 16px;
+                }
+              }
+              @media screen and (max-width: $screen-s) {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                &-accent {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .doplist {
+              &-item {
+                @include p1;
+                color: $grayDark;
+                font-weight: 600;
+                @media screen and (max-width: $screen-l) {
+                  font-size: 16px;
+                  line-height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rise-left {
+	@include rise-left;
+}
+.rise-right {
+	@include rise-right;
+}

@@ -1,35 +1,48 @@
+import { FC } from 'react';
 import styles from './description.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
-import { Image } from '@components';
+import { Link, Image } from '@components';
 
-export const Description: React.FC = () => {
+export const Description: FC = () => {
 
 	return (
 		<section className={cx('container')}>
-      <div className={cx('info')}>
-        <Image
-          wrapperClassName={cx('image-title')}
-          src="./assets/description/title.png"
-          width="500"
-          height="70"
-          alt="Мир Детства"
-        />
-        <p className={cx('info__text')}>
-          Праздник проведённый в Мире Детства - это не просто торжественное мероприятие. Это событие, которое останется с вами, как памятное событие на всю жизнь! О празднике позаботится наш дружный коллектив. Море веселья!
-        </p>
-        <p className={cx('info__subtitle')}>
-          Если вы думаете, где отпраздновать ваше торжество, проведите его с&nbsp;нами&nbsp;- <br/>в <span className={cx('info__subtitle_gradient')}>МИРЕ ДЕТСТВА</span>!
-        </p>
-      </div>
-      <div className={cx('image-wrap')}>
-        <Image
-          wrapperClassName={cx('image')}
-          src="./assets/description/img.png"
-          width="400"
-          height="350"
-          alt="description"
-        />
+      <div className={cx('wrapper')}>
+        <div className={cx('image_left')}>
+          <Image
+            wrapperClassName={cx('image_left-picture')}
+            src="./assets/description/childrenLeft.png"
+            width="300"
+            height="650"
+            alt="Дети выглядывают из-за стены"
+          />
+        </div>
+        <div className={cx('info')}>
+          <p className={cx('info__text')}>
+            Мы собрали лучшие предложения для самых лучших праздников, но это лишь небольшая часть того, что мы можем предложить вам! Узнать про все наши возможности можно пообщавшись с главными специалистами по праздникам в самой локации или по&nbsp;телефону&nbsp;
+            <Link className={cx('info_phone')} href="tel:+79105357486">+7&nbsp;(910)&nbsp;535-74-86</Link>
+          </p>
+          <p className={cx('info__text')}>
+            Наша креативная команда с удовольствием организует и проведет самый веселый, интересный и уникальный детский праздник в игровой комнате <b>«МИР ДЕТСТВА»</b>!
+          </p>
+          <p className={cx('info__text')}>
+          - День рождение;<br/>
+          - Выпускной;<br/>
+          - Тематические вечеринки;<br/>
+          - Познавательные шоу;<br/>
+          - Мастер-классы разных направлений;
+          </p>
+        </div>
+        <div className={cx('image_right')}>
+          <Image
+            wrapperClassName={cx('image_right-picture')}
+            src="./assets/description/childrenBottom.png"
+            width="400"
+            height="170"
+            alt="Дети лежат"
+          />
+        </div>
       </div>
     </section>
 	);

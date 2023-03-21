@@ -7,17 +7,21 @@
   @media screen and (max-width: $screen-s) {
     padding-top: 0;
   }
+
   .list {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 180px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 240px;
     column-gap: 20px;
     @media screen and (max-width: $screen-l) {
-      grid-template-rows: 160px;
+      grid-template-rows: 180px;
     }
     @media screen and (max-width: $screen-s) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 140px);
+      grid-template-rows: repeat(2, 160px);
       row-gap: 20px;
     }
     .item {
@@ -51,16 +55,11 @@
           line-height: 24px;
         }
       }
-      &:nth-child(2) {
-        &:after {
-          content: 'СКОРО';
-        }
-      }
-      &:nth-child(3) {
-        &:after {
-          content: 'СКОРО';
-        }
-      }
+      // &:first-child {
+      //   &:after {
+      //     content: 'СКОРО';
+      //   }
+      // }
       &:last-child {
         &:after {
           content: 'СКОРО';
@@ -87,8 +86,8 @@
         }
       }
       &_img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         @media screen and (max-width: $screen-l) {
           width: 50px;
           height: 50px;

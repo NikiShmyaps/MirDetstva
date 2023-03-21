@@ -5,18 +5,23 @@
     @include horizon_padding;
 		@include width_container;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+    align-items: center;
 		padding-top: 12px;
-
-    @media screen and (max-width: $screen-s) {
-      flex-direction: column;
-    }
   }
 
   .image {
+    &__icon {
+      width: 25px;
+      height: 25px;
+      @media screen and (max-width: $screen-s) {
+        width: 18px;
+        height: 18px;
+      }
+    }
     @media screen and (max-width: $screen-l) {
-      width: 280px;
+      width: 420px;
     }
     @media screen and (max-width: $screen-s) {
       width: 220px;
@@ -24,16 +29,11 @@
   }
 
   .list {
+    margin-top: 35px;
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 1fr;
     column-gap: 20px;
-
-    @media screen and (max-width: 900px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      row-gap: 30px;
-    }
 
     @media screen and (max-width: $screen-s) {
       margin-top: 20px;
@@ -44,15 +44,39 @@
     }
 
     .item {
+      position: relative;
       display: flex;
       align-items: center;
-      transition: .2s ease;
-      border-bottom: 2px solid transparent;
+
+      &:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 0;
+        border-bottom: 3px solid transparent;
+        transition: .3s ease;
+      }
 
       &:first-child {
-        &:hover {
-          transition: .2s ease;
+        &:hover.item:before {
+          transition: .3s ease;
           border-color: #5CCE54;
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        &:hover.item:before {
+          transition: .3s ease;
+          border-color: #FDCe19;
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: $screen-s) {
+        &:before  {
+          border-bottom: 2px solid;
+          bottom: -3px;
         }
       }
       &-wrap {
@@ -61,10 +85,14 @@
       }
 
       &__text {
-        @include p1;
+        @include h3;
         margin-left: 5px;
         color: $blackText;
         font-weight: 600;
+
+        @media screen and (max-width: $screen-l) {
+          font-size: 26px;
+        }
 
         @media screen and (max-width: $screen-s) {
           font-size: 18px;

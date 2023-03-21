@@ -19,9 +19,7 @@ export const Card: React.FC<CardProps> = ({
       <div className={cx('img')}>
         <Image
           wrapperClassName={cx('img')}
-          src={`./assets/gallery/${img}.jpeg`}
-          // width={`${width}`}
-          // height={`${height}`}
+          src={`/assets/gallery/location/${img}.jpeg`}
           width="550"
           height="700"
           alt={`${img}`}

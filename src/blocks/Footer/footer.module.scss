@@ -1,0 +1,17 @@
+.grayLight {
+  background: #ede7e4;
+  width: 100%;
+  margin-top: 130px;
+
+  @media screen and (max-width: $screen-s) {
+    margin-top: 110px;
+  }
+
+  @media screen and (max-width: 555px) {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    margin-top: 50px;
+  }
+}

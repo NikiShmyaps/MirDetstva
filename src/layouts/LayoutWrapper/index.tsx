@@ -1,4 +1,5 @@
 import { Header } from '@blocks';
+import { Footer } from '@blocks';
 import styles from './layoutWrapper.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
@@ -17,7 +18,7 @@ export const LayoutWrapper: FC<LayoutWrapperPropTypes> = ({
         <Meta />
 				<Header />
 				<div className={cx('main')}>{children}</div>
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 		</>
 	);

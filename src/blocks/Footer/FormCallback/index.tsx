@@ -171,7 +171,7 @@ export const FormCallback: React.FC = () => {
         <div className={cx('image-wrap')}>
           <Image
             wrapperClassName={cx('image')}
-            src="./assets/form/img.png"
+            src="/assets/form/img.png"
             width="500"
             height="450"
             alt="print"
