@@ -37,6 +37,7 @@ export const InputField: React.FC<IInputField> = (
               type={type}
               {...formik.getFieldProps({name})}
               className={cx('input_field', `${touched && errors ? 'error' : null}`)}
+              placeholder={name === "age" ? "Например '5-6'" : (null)}
             /> 
             {touched && errors ? (
               <div className={cx('input_error')}>{errors}</div>
