@@ -1,14 +1,59 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(29,29,30,.88);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    display: flex;
+  }
+}
+
+.main-block {
+  position: relative;
+  width: 95%;
+  height: 85%;
+
+  .close {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0.9;
+    .img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
 .container {
-  @include container_wrapper;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
   display: flex;
   flex-direction: column;
-  
+  background: $backgroundWhite;
+  border-radius: 18px;
+  overflow: scroll;
+
+  @media screen and (max-width: $screen-s) {
+    padding: 20px;
+  }
 
   .title {
     @include h2;
     font-weight: 600;
     text-align: center;
     margin-bottom: 30px;
+    color: #511b13;
 
     @media screen and (max-width: $screen-l) {
       margin-bottom: 20px;
@@ -16,6 +61,7 @@
 
     @media screen and (max-width: $screen-s) {
       font-size: 30px;
+      line-height: 28px;
     }
   }
 
@@ -28,97 +74,17 @@
     }
   }
 
-  .from {
+  .form {
     max-width: 600px;
     width: 100%;
 
     @media screen and (max-width: $screen-l) {
       margin-top: 20px;
+      max-width: none;
     }
 
     .phone-wrap {
       position: relative;
-    }
-
-    .input {
-      &_group {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        @media screen and (max-width: $screen-s) {
-          margin-bottom: 10px;
-        }
-      }
-      &_title {
-        @include p2;
-        margin-bottom: 5px;
-
-        &-necessarily {
-          color: #EF4829;
-        }
-      }
-      &_field {
-        width: 100%;
-        padding-left: 10px;
-        height: 40px;
-        @include p3;
-
-        border-radius: 10px;
-        background: #FFFFFF;
-        border: none;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-
-        @media screen and (max-width: $screen-s) {
-          font-size: 16px;
-        }
-        @media screen and (max-width: $screen-xs) {
-          font-weight: 400;
-        }
-        &-phone {
-          position: absolute;
-          top: 50%;
-          left: 10px;
-          transform: translateY(-50%);
-          width: 23px;
-          height: 32px;
-          @include p3;
-
-          @media screen and (max-width: $screen-s) {
-            height: 24px;
-            width: 19px;
-            font-size: 16px;
-          }
-          @media screen and (max-width: $screen-xs) {
-            height: 20px;
-            font-weight: 400;
-          }
-        }
-      }
-      // &-phone {
-      //   padding-left: 30px;
-      //   @media screen and (max-width: $screen-s) {
-      //     padding-left: 28px;
-      //   }
-      // }
-      &_error {
-        @include p2;
-        color: #EF4829;
-      }
-    }
-
-    .error {
-      border: 1px solid #EF4829;
-    }
-
-    .comment {
-      padding-left: 10px;
-      padding-top: 5px;
-      @include p3;
-      height: 100px;
-      border-radius: 10px;
-      background: #FFFFFF;
-      border: none;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
     }
 
     .button {
@@ -131,8 +97,12 @@
       height: 40px;
       
       @include p1;
-      color: $blackText;
+      color: #511b13;
       font-weight: 600;
+
+      @media screen and (max-width: $screen-s) {
+        font-weight: 500;
+      }
     }
   }
 
@@ -140,18 +110,31 @@
     &-wrap {
       margin-right: 50px;
       width: 450px;
+      position: sticky;
+      top: calc((100vh - 100%)/2);
+      height: 405px;
 
       @media screen and (max-width: $screen-l) {
         margin-right: 0;
         margin-bottom: 20px;
         margin: 0 auto;
         width: 350px;
+        position: static;
+        top: auto;
+        height: auto;
       }
 
       @media screen and (max-width: $screen-s) {
         width: 250px;
       }
     }
+  }
+
+  .line {
+    margin: 10px 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(270deg, rgba(#511b13, 0) 0%, #511b13 100%);
   }
 }
 
@@ -210,5 +193,16 @@
     @media screen and (max-width: $screen-s) {
       font-weight: 600;
     }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  .img {
+    width: 30px;
+    height: 30px;
   }
 }

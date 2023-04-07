@@ -1,0 +1,72 @@
+.input {
+  &_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    @media screen and (max-width: $screen-s) {
+      margin-bottom: 10px;
+    }
+
+    .group {
+      display: grid;
+      grid-template-columns: repeat(4, 110px);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 10px;
+      @media screen and (max-width: $screen-l) {
+        grid-template-columns: repeat(auto-fill, minmax(115px, max-content));
+        grid-template-rows: auto;
+      }
+      @media screen and (max-width: $screen-s) {
+        grid-template-columns: repeat(auto-fill, minmax(105px, max-content));
+      }
+      &__item {
+        &_check {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          font-weight: 400;
+          white-space: nowrap;
+          @media screen and (max-width: $screen-l) {
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+      }
+      &__input {
+        display: none;
+        &_main {
+          width: 30px;
+          height: 30px;
+          border: 1px solid #511b13;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .checked_img {
+            opacity: 0;
+          }
+          @media screen and (max-width: $screen-l) {
+            margin-left: 5px;
+          }
+        }
+        &[type="checkbox"]:checked + .group__input_main .checked_img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &_title {
+    @include p2;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #511b13;
+    @media screen and (max-width: $screen-s) {
+      font-weight: 500;
+    }
+
+    &-necessarily {
+      color: $error;
+    }
+  }
+}

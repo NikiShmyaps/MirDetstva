@@ -1,0 +1,13 @@
+.calendar {
+  &_text {
+    @include p2;
+    margin-top: 5px;
+    color: #511b13;
+    &-accent {
+      font-weight: 600;
+      @media screen and (max-width: $screen-s) {
+        font-weight: 500;
+      }
+    }
+  }
+}

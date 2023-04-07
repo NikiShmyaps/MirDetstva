@@ -16,8 +16,8 @@
       grid-template-rows: 160px;
     }
     @media screen and (max-width: $screen-s) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 140px);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 140px);
       row-gap: 20px;
     }
     .item {

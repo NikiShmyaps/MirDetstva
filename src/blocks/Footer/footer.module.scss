@@ -15,3 +15,72 @@
     margin-top: 50px;
   }
 }
+
+.application {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  @include h2;
+  font-weight: 700;
+  line-height: 35px;
+  color: #511b13;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -13px;
+    left: 0;
+    width: 0;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      transition: 0.3s ease;
+      border-color: #511b13;
+      width: 100%;
+    }
+
+    .arrow {
+      transform: translateX(-5px);
+      transition: .3s ease;
+    }
+  }
+
+  @media screen and (max-width: $screen-l) {
+    font-size: 44px;
+  }
+
+  @media screen and (max-width: 950px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: $screen-s) {
+    font-size: 38px;
+    &:before {
+      bottom: -4px;
+    }
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    font-size: 30px;
+    &:before {
+      bottom: -2px;
+    }
+    .arrow {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .arrow {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+    transition: .3s ease;
+  }
+}
