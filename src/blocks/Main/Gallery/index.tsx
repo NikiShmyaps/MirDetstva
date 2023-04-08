@@ -47,7 +47,7 @@ export const Gallery: React.FC = () => {
           </Link>
         </li>
         <li className={cx('item')}>
-          <Link className={cx('item_wrap')} href="#" disabled>
+          <Link className={cx('item_wrap')} href="/balloon">
             <div className={cx('item_content')}>
               <Image
                 wrapperClassName={cx('item_img')}
@@ -57,7 +57,7 @@ export const Gallery: React.FC = () => {
                 alt="baloons"
               />
               <span className={cx('item__text')}>Шары</span>
-              {/* <span className={cx('item_arrow')}>
+              <span className={cx('item_arrow')}>
                 <Image
                   wrapperClassName={cx('item_arrow-img')}
                   src="./assets/right-arrow.png"
@@ -65,12 +65,12 @@ export const Gallery: React.FC = () => {
                   height="35"
                   alt="arrow"
                 />
-              </span> */}
+              </span>
             </div>
           </Link>
         </li>
         <li className={cx('item')}>
-          <Link className={cx('item_wrap')} href="#" disabled>
+          <Link className={cx('item_wrap')} href="/price">
             <div className={cx('item_content')}>
               <Image
                 wrapperClassName={cx('item_img')}
@@ -80,6 +80,15 @@ export const Gallery: React.FC = () => {
                 alt="price"
               />
               <span className={cx('item__text')}>Цены</span>
+              <span className={cx('item_arrow')}>
+                <Image
+                  wrapperClassName={cx('item_arrow-img')}
+                  src="./assets/right-arrow.png"
+                  width="35"
+                  height="35"
+                  alt="arrow"
+                />
+              </span>
             </div>
           </Link>
         </li>

@@ -33,6 +33,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Сервировка детского стола</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -46,6 +47,7 @@ export const List: React.FC = () => {
                     <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>Фонтан из 10&nbsp;шаров или цифра</span>
                   </div>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -56,6 +58,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Бесплатный Wi-Fi</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -66,6 +69,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Интерактивные игры</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -76,6 +80,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Многоуровневый лабиринт с сухим бассейном</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -86,6 +91,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Вода/ чай / кофе</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -115,6 +121,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Аренда Локации</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -125,6 +132,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Сервировка детского стола</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -135,6 +143,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Оформление шарами</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -170,6 +179,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Аренда Локации</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -180,6 +190,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Сервировка детского стола</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -190,6 +201,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Оформление шарами</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -225,6 +237,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Оформление шарами</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -235,6 +248,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Сервировка детского стола</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -245,6 +259,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Оформление шарами</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -285,6 +300,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Аренда локации</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -295,6 +311,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Сервировка детского стола</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -305,6 +322,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Оформление шарами</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -318,6 +336,7 @@ export const List: React.FC = () => {
                     <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>1 час - один персонаж на ваш выбор</span>
                   </div>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -328,7 +347,7 @@ export const List: React.FC = () => {
                   />
                   <div className={cx('item-list__item-block')}>
                     <span className={cx('item-list__item_text')}>Фольгированная дискотека</span>
-                    <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>Автоматическая пушка, продолжительность 30 мин</span>
+                    <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>Автоматическая пушка, продолжительность 30&nbsp;мин</span>
                   </div>
                 </li>
               </ul>
@@ -353,6 +372,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Аренда локации</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -363,6 +383,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Сервировка детского стола</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -373,6 +394,7 @@ export const List: React.FC = () => {
                   />
                   <span className={cx('item-list__item_text')}>Оформление шарами</span>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -386,6 +408,7 @@ export const List: React.FC = () => {
                     <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>1 час - один персонаж на ваш выбор</span>
                   </div>
                 </li>
+                <div className={cx('line')}></div>
                 <li className={cx('item-list__item')}>
                   <Image
                     wrapperClassName={cx('check')}
@@ -396,7 +419,7 @@ export const List: React.FC = () => {
                   />
                   <div className={cx('item-list__item-block')}>
                     <span className={cx('item-list__item_text')}>Неоновое шоу</span>
-                    <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>Автоматическая пушка, продолжительность 30 мин</span>
+                    <span className={cx('item-list__item_text', 'item-list__item_text-accent')}>Автоматическая пушка, продолжительность 30&nbsp;мин</span>
                   </div>
                 </li>
               </ul>

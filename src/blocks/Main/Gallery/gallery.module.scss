@@ -56,16 +56,16 @@
           content: 'СКОРО';
         }
       }
-      &:nth-child(3) {
-        &:after {
-          content: 'СКОРО';
-        }
-      }
-      &:last-child {
-        &:after {
-          content: 'СКОРО';
-        }
-      }
+      // &:nth-child(3) {
+      //   &:after {
+      //     content: 'СКОРО';
+      //   }
+      // }
+      // &:last-child {
+      //   &:after {
+      //     content: 'СКОРО';
+      //   }
+      // }
       &_wrap {      
         padding: 20px;  
         width: 100%;

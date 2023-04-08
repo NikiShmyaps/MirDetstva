@@ -4,3 +4,5 @@ export { Main } from './Main'
 
 export { Location } from './Location'
 export { Package } from './Package'
+export { Price } from './Price';
+export { Balloon } from './Balloon';

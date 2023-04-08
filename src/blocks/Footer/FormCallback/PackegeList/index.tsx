@@ -1,17 +1,17 @@
+import { FC, ChangeEvent } from 'react';
 import styles from './packegeList.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 import { Image } from '@components';
 
 interface IPackegeList {
-	formik: any;
+	formik: any
 }
 
-export const PackegeList: React.FC<IPackegeList> = ({ formik }) => {
-
+export const PackegeList: FC<IPackegeList> = ({ formik }) => {
   const packeges = ["Пакет 1", "Пакет 2", "Пакет 3", "Пакет 4", "Пакет 5"];
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { checked, name } = e.target;
 
     if ( checked ) {
@@ -19,7 +19,7 @@ export const PackegeList: React.FC<IPackegeList> = ({ formik }) => {
     } else {
 			formik.setFieldValue(
 				"packeges",
-				[...formik.values.packeges.filter((item: any) => item !== name)]
+				[...formik.values.packeges.filter((item: string) => item !== name)]
 			);
     }
   }

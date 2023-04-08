@@ -51,7 +51,6 @@ export const InputField: React.FC<IInputField> = (
           ></textarea>
         )  
       }
-      
     </div>
 	)
 }

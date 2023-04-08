@@ -1,6 +1,5 @@
 .container {
   @include container_wrapper;
-  padding-top: 0;
 
   .title {
     @include h2;

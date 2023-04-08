@@ -15,7 +15,7 @@ export const Price: React.FC = () => {
             <h3 className={cx('item__title')}>Аренда локации под день рождения</h3>
           </div>
           <div className={cx('item__block')}>
-            <p className={cx('item__description')}><span className={cx('bold')}>Цена: </span>1500 руб/час (минимально 2 часа)</p>
+            <p className={cx('item__description')}><span className={cx('bold')}>Цена: </span>2000 руб/час (минимально 2 часа)</p>
             <p className={cx('item__description')}><span className={cx('bold')}>Время: </span>с 10-13, с 14-17, с 18-21</p>
           </div>
         </li>
@@ -32,7 +32,7 @@ export const Price: React.FC = () => {
           </div>
         </li>
         <div className={cx('line')}></div>
-        <li className={cx('item')}>
+        {/* <li className={cx('item')}>
           <div className={cx('item__head')}>
             <span className={cx('elem', 'green')}></span>
             <h3 className={cx('item__title')}>Аниматоры</h3>
@@ -110,7 +110,7 @@ export const Price: React.FC = () => {
             </div>
           </div>
         </li>
-        <div className={cx('line')}></div>
+        <div className={cx('line')}></div> */}
       </ul>
     </section>
 	);
