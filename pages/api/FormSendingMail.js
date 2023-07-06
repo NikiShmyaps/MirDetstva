@@ -17,13 +17,14 @@ export default async (req, res) => {
   const {
     name= '',
     phone= '',
+    ageNamesake= '',
+    genderNamesake= '',
     adult= '',
     children= '',
-    age= '',
-    comment= '',
-    packeges= [],
+    packege= '',
     date= '',
     time= '',
+    dopServices= [],
   } = req.body;
 
   await transporter.sendMail({
@@ -32,13 +33,13 @@ export default async (req, res) => {
     subject: `${name} оставил новую заявка`,
     html: `<div>
       Клиент ${name} оставил заявку, его номер телефона ${phone}<br/>
+      ${ageNamesake && `Возраст именниника: ${ageNamesake}, пол: ${genderNamesake}`}
       Количество взрослых: ${adult}<br/>
       Количество детей: ${children}<br/>
-      Возраст детей: ${age}<br/>
-      ${packeges ? `Пакеты: ${packeges}<br/>` : ''}
+      ${packege && `Пакет: ${packege}<br/>`}
       Дата: ${date}<br/>
       Время: ${time}<br/>
-      ${comment ? `Так же клиент оставил комментарий: ${comment}` : ''}
+      ${dopServices && `Так же клиент выбрал доп сервисы: ${dopServices}`}
     </div>`
   })
   res.status(200).end()

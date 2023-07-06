@@ -1,0 +1,50 @@
+.input_title {
+  @include p2;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #511b13;
+  @media screen and (max-width: $screen-s) {
+    font-weight: 500;
+  }
+
+  &-necessarily {
+    color: $error;
+  }
+}
+
+.date {
+  margin-bottom: 15px;
+  &-list {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &-item {
+    cursor: pointer;
+    &__title {
+      margin-bottom: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+    }
+    &__input {
+      display: none;
+      &_main {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .checked_img {
+          opacity: 0;
+        }
+      }
+      &[type="checkbox"]:checked + .date-item__input_main .checked_img {
+        opacity: 1;
+      }
+    }
+  }
+}

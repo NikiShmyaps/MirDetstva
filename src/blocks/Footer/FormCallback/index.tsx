@@ -8,6 +8,7 @@ import { CalendarComponent } from './CalendarComponent';
 import { InputField } from './InputField';
 import { PackegeList } from './PackegeList';
 import { TimeComponent } from './TimeComponent';
+import { DopService } from './DopService';
 
 interface IFormCallback {
 	showForm: boolean;
@@ -52,10 +53,10 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
       errors.children = 'Введены некорректные данные'
     }
 
-    if (!values.age) {
-      // @ts-ignore
-      errors.age = 'Пожалуйста, введите возраст детей'
-    }
+    // if (!values.age) {
+    //   // @ts-ignore
+    //   errors.age = 'Пожалуйста, введите возраст детей'
+    // }
 
     return errors;
   }
@@ -64,13 +65,14 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
     initialValues: {
       name: '',
       phone: '',
+      ageNamesake: '',
+      genderNamesake: '',
       adult: '',
       children: '',
-      age: '',
-      comment: '',
-      packeges: [],
+      packege: '',
 			date: '',
       time: '',
+      dopServices: [],
     },
     validate,
     onSubmit: (values, {resetForm}) => {
@@ -88,13 +90,14 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
           resetForm({ values: {
             name: '',
             phone: '',
+            ageNamesake: '',
+            genderNamesake: '',
             adult: '',
             children: '',
-            age: '',
-            comment: '',
-            packeges: [],
+            packege: '',
             date: '',
             time: '',
+            dopServices: [],
           }})
           setIsLoading(false)
         }
@@ -143,8 +146,20 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
               <InputField
                 formik={formik}
                 type={'number'}
+                label={"Возраст именниника"}
+                name={"ageNamesake"}
+              />
+              <InputField
+                formik={formik}
+                type={'text'}
+                label={"Пол именниника"}
+                name={"genderNamesake"}
+              />
+              <InputField
+                formik={formik}
+                type={'number'}
                 label={"Количество взрослых"}
-                name={"adult"}
+                name={"adult"}  
               />
               <InputField
                 formik={formik}
@@ -155,7 +170,7 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
                 touched={formik.touched.children}
                 errors={formik.errors.children}
               />
-              <InputField
+              {/* <InputField
                 formik={formik}
                 type={'text'}
                 label={"Возраст детей"}
@@ -163,21 +178,20 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
                 name={"age"}
                 touched={formik.touched.age}
                 errors={formik.errors.age}
-              />
+              /> */}
               <PackegeList formik={formik} />
               <div className={cx('line')}></div>
-              <CalendarComponent formik={formik}/>
+              <div className={cx('dataTime')}>
+                <CalendarComponent formik={formik}/>
+                <div className={cx('line')}></div>
+                <TimeComponent formik={formik}/>  
+              </div>
               <div className={cx('line')}></div>
-              <TimeComponent formik={formik}/>
+              <DopService formik={formik} />
               <div className={cx('line')}></div>
-              <InputField
-                formik={formik}
-                label={"Есть еще пожелания? Оставьте коментарий ниже"}
-                name={"comment"}
-              />
               <button type="submit" className={cx('button')}>Отправить</button>
             </form >
-            <div className={cx('image-wrap')}>
+            {/* <div className={cx('image-wrap')}>
               <Image
                 wrapperClassName={cx('image')}
                 src="/assets/form/img.png"
@@ -185,7 +199,7 @@ export const FormCallback: React.FC<IFormCallback> = ({ showForm, setShowForm })
                 height="450"
                 alt="print"
               />
-            </div>
+            </div> */}
           </div>
           <div className={cx('modal', `${modal ? 'modal-active' : null}`)}>
             <div className={cx('modal-wrap')}>

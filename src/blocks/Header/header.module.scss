@@ -28,15 +28,32 @@
     }
   }
 
+  .subtitle {
+    @include h3;
+    margin: 35px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @media screen and (max-width: $screen-l) {
+      font-size: 26px;
+      margin: 20px 0;
+    }
+
+    @media screen and (max-width: $screen-s) {
+      font-size: 14px;
+      margin: 15px 0;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+
   .list {
-    margin-top: 35px;
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 1fr;
     column-gap: 20px;
 
     @media screen and (max-width: $screen-s) {
-      margin-top: 20px;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2, max-content);
       row-gap: 15px;

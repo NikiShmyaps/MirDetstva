@@ -59,11 +59,11 @@
       //     content: 'СКОРО';
       //   }
       // }
-      &:last-child {
-        &:after {
-          content: 'СКОРО';
-        }
-      }
+      // &:last-child {
+      //   &:after {
+      //     content: 'СКОРО';
+      //   }
+      // }
       &_wrap {      
         padding: 20px;  
         width: 100%;

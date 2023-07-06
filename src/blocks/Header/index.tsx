@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
             alt="logo"
           />
         </Link>
+        <p className={cx('subtitle')}>то самое место для детского прадника!</p>
         <ul className={cx('list')}>
           <li className={cx('item')}>
             <Link href="tel:+79105357486">
