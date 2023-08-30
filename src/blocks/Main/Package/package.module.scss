@@ -13,14 +13,15 @@
     max-width: 1000px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 240px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 180px;
     column-gap: 20px;
     @media screen and (max-width: $screen-l) {
       grid-template-rows: 180px;
     }
     @media screen and (max-width: $screen-s) {
-      grid-template-rows: 160px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 160px);
       row-gap: 20px;
     }
     .item {
@@ -29,12 +30,12 @@
       box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.15);
       border-radius: 8px;
       background: #ede7e4;
-      transition: .3s ease;
+      transition: 0.3s ease;
       &:hover {
         transform: translateY(-10px);
-        transition: .3s ease;
+        transition: 0.3s ease;
         .item_arrow {
-          transition: .3s ease;
+          transition: 0.3s ease;
           transform: translateX(-10px);
         }
       }
@@ -54,20 +55,25 @@
           line-height: 24px;
         }
       }
-      // &:first-child {
-      //   &:after {
-      //     content: 'СКОРО';
-      //   }
-      // }
-      // &:last-child {
-      //   &:after {
-      //     content: 'СКОРО';
-      //   }
-      // }
-      &_wrap {      
-        padding: 20px;  
+      @media screen and (max-width: $screen-s) {
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        &:nth-child(2) {
+          grid-column-start: 3;
+          grid-column-end: 5;
+        }
+        &:last-child {
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+      &_wrap {
+        padding: 20px;
         width: 100%;
         height: 100%;
+        cursor: pointer;
       }
       &_content {
         display: flex;
@@ -85,8 +91,8 @@
         }
       }
       &_img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         @media screen and (max-width: $screen-l) {
           width: 50px;
           height: 50px;
@@ -96,7 +102,7 @@
         position: absolute;
         top: 5px;
         right: 5px;
-        transition: .3s ease;
+        transition: 0.3s ease;
       }
     }
   }

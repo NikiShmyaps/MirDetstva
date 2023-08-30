@@ -4,7 +4,7 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background: rgba(29,29,30,.88);
+  background: rgba(29, 29, 30, 0.88);
   z-index: 100;
   display: none;
   align-items: center;
@@ -89,13 +89,13 @@
 
     .button {
       cursor: pointer;
-      background: #FFFFFF;
+      background: #ffffff;
       border: none;
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
       border-radius: 4px;
       width: 200px;
       height: 40px;
-      
+
       @include p1;
       color: #511b13;
       font-weight: 600;
@@ -111,7 +111,7 @@
       margin-right: 50px;
       width: 450px;
       position: sticky;
-      top: calc((100vh - 100%)/2);
+      top: calc((100vh - 100%) / 2);
       height: 405px;
 
       @media screen and (max-width: $screen-l) {
@@ -162,7 +162,7 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background: rgba(29,29,30,.88);
+  background: rgba(29, 29, 30, 0.88);
   z-index: 100;
   display: none;
   align-items: center;
@@ -201,7 +201,7 @@
     border-radius: 8px;
     width: 200px;
     height: 40px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 2px solid #aaa7a6;
     @include p1;
     color: $blackText;
