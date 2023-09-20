@@ -300,7 +300,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Оформление шарами
+                    Аренда локации
                   </span>
                 </li>
                 <div className={cx("line")}></div>
@@ -379,7 +379,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Аренда локации 3 часа
+                    Аренда локации
                   </span>
                 </li>
                 <div className={cx("line")}></div>
