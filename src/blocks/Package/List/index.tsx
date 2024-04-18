@@ -154,7 +154,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Аренда Локации
+                    Аренда Локации 3 часа
                   </span>
                 </li>
                 <div className={cx("line")}></div>
@@ -208,7 +208,7 @@ export const List: React.FC = () => {
                 </li>
               </ul>
               <div className={cx("price")}>
-                <p className={cx("price-text")}>10 900 руб</p>
+                <p className={cx("price-text")}>12 000 руб</p>
               </div>
             </div>
           </div>
@@ -227,7 +227,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Аренда Локации
+                    Аренда Локации 3 часа
                   </span>
                 </li>
                 <div className={cx("line")}></div>
@@ -281,7 +281,7 @@ export const List: React.FC = () => {
                 </li>
               </ul>
               <div className={cx("price")}>
-                <p className={cx("price-text")}>13 200 руб</p>
+                <p className={cx("price-text")}>14 500 руб</p>
               </div>
             </div>
           </div>
@@ -300,7 +300,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Аренда локации
+                    Аренда локации 3 часа
                   </span>
                 </li>
                 <div className={cx("line")}></div>
@@ -360,7 +360,7 @@ export const List: React.FC = () => {
                 </li>
               </ul>
               <div className={cx("price")}>
-                <p className={cx("price-text")}>15 800 руб</p>
+                <p className={cx("price-text")}>17 000 руб</p>
               </div>
             </div>
           </div>
@@ -379,7 +379,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Аренда локации
+                    Аренда локации 3 часа
                   </span>
                 </li>
                 <div className={cx("line")}></div>
@@ -456,7 +456,7 @@ export const List: React.FC = () => {
                 </li>
               </ul>
               <div className={cx("price")}>
-                <p className={cx("price-text")}>16 900 руб</p>
+                <p className={cx("price-text")}>18 500 руб</p>
               </div>
             </div>
           </div>
@@ -475,7 +475,7 @@ export const List: React.FC = () => {
                     alt="check mark"
                   />
                   <span className={cx("item-list__item_text")}>
-                    Аренда локации
+                    Аренда локации 3 часа
                   </span>
                 </li>
                 <div className={cx("line")}></div>
@@ -523,7 +523,7 @@ export const List: React.FC = () => {
                         "item-list__item_text-accent"
                       )}
                     >
-                      1 час - один персонаж на ваш выбор
+                      1 час - два персонажа на ваш выбор
                     </span>
                   </div>
                 </li>
@@ -552,12 +552,12 @@ export const List: React.FC = () => {
                 </li>
               </ul>
               <div className={cx("price")}>
-                <p className={cx("price-text")}>18 900 руб</p>
+                <p className={cx("price-text")}>20 000 руб</p>
               </div>
             </div>
           </div>
         </li>
-        <li ref={item7} className={cx("item")}>
+        {/* <li ref={item7} className={cx("item")}>
           <div className={cx("wrap")}>
             <div className={cx("block")}>
               <h3 className={cx("item_title")}>Пакет 6</h3>
@@ -652,7 +652,7 @@ export const List: React.FC = () => {
               </div>
             </div>
           </div>
-        </li>
+        </li> */}
       </ul>
     </section>
   );

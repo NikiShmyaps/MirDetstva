@@ -56,7 +56,7 @@ export const Package: React.FC = () => {
           </Link>
         </li>
         <li className={cx("item")}>
-          <div className={cx("item_wrap")} onClick={() => setShowPopup(true)}>
+          <div className={cx("item_wrap")}>
             <div className={cx("item_content")}>
               <Image
                 wrapperClassName={cx("item_img")}
@@ -66,15 +66,6 @@ export const Package: React.FC = () => {
                 alt="location"
               />
               <span className={cx("item__text")}>Наши кружки</span>
-              <span className={cx("item_arrow")}>
-                <Image
-                  wrapperClassName={cx("item_arrow-img")}
-                  src="./assets/right-arrow.png"
-                  width="35"
-                  height="35"
-                  alt="arrow"
-                />
-              </span>
             </div>
           </div>
         </li>
