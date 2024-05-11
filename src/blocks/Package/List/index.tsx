@@ -25,7 +25,7 @@ export const List: React.FC = () => {
               <h3 className={cx("item_title")}>
                 Аренда локации{" "}
                 <span className={cx("item_title_accent")}>
-                  2000&nbsp;руб/час
+                  2500&nbsp;руб/час
                 </span>{" "}
               </h3>
               <p className={cx("item_subtitle")}>
@@ -93,8 +93,8 @@ export const List: React.FC = () => {
                     Многоуровневый лабиринт с сухим бассейном
                   </span>
                 </li>
-                <div className={cx("line")}></div>
-                <li className={cx("item-list__item")}>
+                {/* <div className={cx("line")}></div> */}
+                {/* <li className={cx("item-list__item")}>
                   <Image
                     wrapperClassName={cx("check")}
                     src="/assets/check.png"
@@ -105,7 +105,7 @@ export const List: React.FC = () => {
                   <span className={cx("item-list__item_text")}>
                     Интерактивные игры
                   </span>
-                </li>
+                </li> */}
                 <div className={cx("line")}></div>
                 <li className={cx("item-list__item")}>
                   <Image
