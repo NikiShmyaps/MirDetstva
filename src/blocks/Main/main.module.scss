@@ -1,0 +1,14 @@
+.snowPresent {
+  margin-bottom: 80px;
+  @media screen and (max-width: $screen-s) {
+    @include container_wrapper;
+  }
+
+  &_img {
+    width: 680px;
+
+    @media screen and (max-width: $screen-s) {
+      width: 100%;
+    }
+  }
+}
