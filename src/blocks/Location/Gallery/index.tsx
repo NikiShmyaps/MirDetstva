@@ -18,69 +18,36 @@ export const Gallery: React.FC = () => {
   const item10 = useIntersection(100, cx('item', 'rise-left-right'));
   const item11 = useIntersection(300, cx('item', 'rise-bottom-left'));
   const item12 = useIntersection(200, cx('item', 'rise-right'));
-  
 	return (
 		<section className={cx('container')}>
       <h2 className={cx('title')}>Локация</h2>
       <ul className={cx('list')}>
         <li ref={item1} className={cx('item')}>
-          <Card 
-            img="1"
+          <Card img="1"
           />
         </li>
         <li ref={item2} className={cx('item')}>
-          <Card 
-            img="2"
+          <Card img="2"
           />
         </li>
         <li ref={item3} className={cx('item')}>
-          <Card 
-            img="3"
+          <Card img="3"
           />
         </li>
         <li ref={item4} className={cx('item')}>
-          <Card 
-            img="4"
+          <Card img="4"
           />
         </li>
         <li ref={item5} className={cx('item')}>
-          <Card 
-            img="5"
+          <Card img="5"
           />
         </li>
         <li ref={item6} className={cx('item')}>
-          <Card 
-            img="6"
+          <Card img="6"
           />
         </li>
         <li ref={item7} className={cx('item')}>
-          <Card 
-            img="7"
-          />
-        </li>
-        <li ref={item8} className={cx('item')}>
-          <Card 
-            img="8"
-          />
-        </li>
-        <li ref={item9} className={cx('item')}>
-          <Card 
-            img="9"
-          />
-        </li>
-        <li ref={item10} className={cx('item')}>
-          <Card 
-            img="10"
-          />
-        </li>
-        <li ref={item11} className={cx('item')}>
-          <Card 
-            img="11"
-          />
-        </li>
-        <li ref={item12} className={cx('item')}>
-          <Card 
-            img="12"
+          <Card img="7"
           />
         </li>
       </ul>
