@@ -10,7 +10,7 @@ export const Main: FC = () => {
 	return (
 		<>
 			<Description/>
-			<div className={styles.snowPresent}>
+			{/* <div className={styles.snowPresent}>
 				<Image
 					wrapperClassName={styles.snowPresent_img}
 					src="./assets/snow.jpg"
@@ -18,7 +18,7 @@ export const Main: FC = () => {
 					height="906"
 					alt="snow-present"
 				/>
-			</div>
+			</div> */}
 			<Gallery />
 			<Package />
 		</>

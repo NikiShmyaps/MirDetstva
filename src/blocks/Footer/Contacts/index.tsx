@@ -9,11 +9,11 @@ export const Contacts: React.FC = () => {
 
   const place = useIntersection(200, cx('item', 'rise-left'));
 	const time = useIntersection(400, cx('item', 'rise-left'));
-	const phone = useIntersection(500, cx('item', 'rise-left'));
+	const phone = useIntersection(600, cx('item', 'rise-left'));
+  const vk = useIntersection(800, cx('item', 'rise-left'));
 
 	return (
     <>
-      
       <section className={cx('container')}>
         <div className={cx('childrens')}>
           <Image
@@ -62,6 +62,20 @@ export const Contacts: React.FC = () => {
                       alt="phone"
                     />
                     <span className={cx('item__text')}>+7(910)-535-74-86</span>
+                  </div>
+                </Link>
+              </li>
+              <li ref={vk} className={cx('item')}>
+                <Link href="https://vk.com/cb__lab">
+                  <div className={cx('item-wrap')}>
+                    <Image
+                      wrapperClassName={cx('image__vk')}
+                      src="/assets/vk.svg"
+                      width="40"
+                      height="40"
+                      alt="vk"
+                    />
+                    <span className={cx('item__text')}>Наша группа ВКонтакте</span>
                   </div>
                 </Link>
               </li>
