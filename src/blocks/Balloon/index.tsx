@@ -1,16 +1,19 @@
-import styles from './balloon.module.scss';
+import { FC } from 'react';
 import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
+
 import { Image } from '@components';
-import { ballons } from '@helpers';
+import { balloons } from '@helpers';
 
-export const Balloon: React.FC = () => {
+import styles from './balloon.module.scss';
 
-	return (
+const cx = classNames.bind(styles);
+
+export const Balloon: FC = () => {
+  return (
 		<section className={cx('container')}>
       <h2 className={cx('title')}>У нас вы можете приобрести шары</h2>
       <ul className={cx('list')}>
-        {ballons.map((item) => (
+        {balloons.map((item) => (
           <li className={cx('item')}>
             <div className={cx('item__img')}>
               <Image

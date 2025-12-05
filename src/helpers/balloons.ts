@@ -1,4 +1,4 @@
-export const ballons = [
+export const balloons = [
   {
     img: '01',
     title: 'Шар разноцветный без рисунка пастель 30см',
