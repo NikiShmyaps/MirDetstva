@@ -22,7 +22,7 @@
   .list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     justify-content: space-between;
     row-gap: 10px;
